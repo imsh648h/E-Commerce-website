@@ -1,0 +1,80 @@
+.newsletter {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+    text-align: center;
+    background:linear-gradient(180deg,#fde1ff 0%,#e1ffea22 60%);
+    border-radius: 10px;
+}
+
+.newsletter h2 {
+    color: #454545;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    font-size: 16px;
+    color:#454545;
+    margin-bottom: 20px;
+}
+
+.newsletter-input {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: #616161;
+}
+
+.newsletter-input input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.newsletter-input button {
+    padding: 10px 20px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter-input button:hover {
+    background: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+
+.newsletter-input button:active {
+    transform: scale(0.95);
+}
+
+.newsletter-input button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    transform: skewX(-25deg);
+}
+
+.newsletter-input button:hover::after {
+    animation: shine 0.8s ease;
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
